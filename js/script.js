@@ -70,7 +70,7 @@ function numberUser () {
 
     // controllo dei numeri
     for (j = 0; j < arrNum.length; j++) {
-        if (arrNum[j] == numUser[j]) {
+        if (arrNum.includes(numUser[j])) {
             numGiusti.innerHTML += `${numUser[j]}, `;
         }
     }
