@@ -12,14 +12,24 @@ const numCont = document.getElementById("container");
 let arrNum = [];
 
 randomGenerator();
-
 console.log(arrNum);
+
+// html
+const numDiv = document.createElement("div");
+numDiv.innerHTML = `
+    <h2>
+        Questi sono i tuoi numeri : 
+        ${arrNum}
+    </h2>
+`;
+
+numCont.append(numDiv);
 
 // funzioni
 function randomGenerator () {
     while (arrNum.length < 5) {
 
-        let Num = Math.floor(Math.random() * 100) - 1;
+        let Num = Math.floor(Math.random() * 100) + 1;
 
         let duplicati = false;
 
