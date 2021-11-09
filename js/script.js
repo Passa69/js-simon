@@ -26,7 +26,11 @@ numDiv.innerHTML = `
 numCont.append(numDiv);
 
 // i numeri scompaiono
-setTimeout(numberNone, 30000);
+setTimeout(numberNone, 5000);
+
+// richiesta all'utente
+setTimeout(numberUser, 5000);
+
 
 // funzioni
 function randomGenerator () {
@@ -51,4 +55,11 @@ function randomGenerator () {
 
 function numberNone () {
     numDiv.classList.add("time_out");
+}
+
+function numberUser () {
+    for (i = 0; i < 5; i++) {
+        const numUser = parseInt(prompt("Inserisci qui, uno alla volta, i numeri che hai visto: "));
+        console.log(numUser);
+    }
 }
