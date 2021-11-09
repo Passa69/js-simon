@@ -57,20 +57,21 @@ function numberNone () {
 }
 
 function numberUser () {
+    const numUser = [];
+
+    for (i = 0; i < 5; i++) { 
+        numUser.push(parseInt(prompt("Inserisci qui, uno alla volta, i numeri che hai visto: ")));   
+    }
+    console.log(numUser);
 
     const numGiusti = document.createElement("div");
     numGiusti.innerHTML = `Questi sono i numeri che hai indovinato: `;
     numCont.append(numGiusti);
 
-    for (i = 0; i < 5; i++) {
-        const numUser = parseInt(prompt("Inserisci qui, uno alla volta, i numeri che hai visto: "));
-        console.log(numUser);
-
-        // controllo dei numeri
-        for (j = 0; j < arrNum.length; j++) {
-            if (arrNum[j] === numUser) {
-                numGiusti.innerHTML += numUser + ', ';
-            }
+    // controllo dei numeri
+    for (j = 0; j < arrNum.length; j++) {
+        if (arrNum[j] == numUser[j]) {
+            numGiusti.innerHTML += `${numUser[j]}, `;
         }
     }
 }
