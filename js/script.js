@@ -31,6 +31,20 @@ setTimeout(numberNone, 5000);
 // richiesta all'utente
 setTimeout(numberUser, 5000);
 
+// controllo dei numeri
+for (i = 0; i < arrNum.length; i++) {
+    if (arrNum[i] === numUser) {
+        const numGiusti = document.createElement("div");
+        numGiusti.innerHTML = `
+            <h2>
+                Questi sono i numeri che hai indovinato: 
+                ${arrNum[i]}
+            </h2>
+        `;
+
+        numCont.append(numGiusti);
+    }
+}
 
 // funzioni
 function randomGenerator () {
