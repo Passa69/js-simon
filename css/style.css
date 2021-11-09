@@ -1,0 +1,11 @@
+/* generale rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* number js */
+.time_out {
+    display: none;
+}

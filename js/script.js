@@ -25,6 +25,9 @@ numDiv.innerHTML = `
 
 numCont.append(numDiv);
 
+// i numeri scompaiono
+setTimeout(numberNone, 30000);
+
 // funzioni
 function randomGenerator () {
     while (arrNum.length < 5) {
@@ -44,4 +47,8 @@ function randomGenerator () {
         }
      
     }
+}
+
+function numberNone () {
+    numDiv.classList.add("time_out");
 }
